@@ -43,9 +43,15 @@
               </div>
             </div>
           </aside>
+          {{#if feature_image}}
+            <figure class="post-full-image" style="background-image: url({{feature_image}})"></figure>
+          {{/if}}
           <div itemprop="articleBody" class="post-body">
             {{content}}
           </div>
+          {{#has tag="Games"}}
+            <a href="/games{{url}}">Play Game</a>
+          {{/has}}
           <footer class="post-footer">
             <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
               {{#if author.profile_image}}
